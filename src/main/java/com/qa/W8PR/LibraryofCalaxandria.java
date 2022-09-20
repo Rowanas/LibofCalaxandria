@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class W8PRRecipeProjectApplication {
+public class LibraryofCalaxandria {
 
 	public static void main(String[] args) {
-		SpringApplication.run(W8PRRecipeProjectApplication.class, args);
+		SpringApplication.run(LibraryofCalaxandria.class, args);
 	}
 
 }

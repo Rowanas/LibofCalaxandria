@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowan's Shopping List Generator by Comic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel= "stylesheet" href="./comicstyles.CSS">
+    <link rel="icon" type="image/x-icon" href="./screaming monkey.jpg">
+<!-- Adds a screaming monkey favicon as proof of learning, and to stop the "no favicon" error in console -->
+<!-- That error doesn't DO anything, but it's annoying, so I fixed it-->
+</head>
+
+<!-- html audio controls seems very... wonky. This should set the volume low, but it.. doesn't. -->
+<body>
+
+    <audio controls volume="0.3" autoplay loop>
+        <source src="ImpossibleHero.mp3" type="audio/mpeg">
+      Your browser does not support this audio element.
+      </audio>
+    
+    <div id = "main_div">
+        <h1>Comic Form</h1>
+        <h4>Hover over each field below for further information</h4>
+
+        <!-- More proof of learning, as well as a handier way to access my readme from within my application! -->
+        <button id ="info_button" class="btn btn-secondary">Information on using this web app</button>
+        <form method="get" action="./readme.html" target="_blank">
+            <button id ="view_readme" class="btn btn-secondary">Readme</button>
+        </form>
+
+    </div>
+    <!-- My formatting for this project is a fair bit better, I feel. -->
+    <div id = "input_div">
+        <fieldset>
+            <div class="input-group mb-3" title="To delete or update a comic, please fill in this box with the id of the comic you would like to change">
+                <span class="input-group-text" >Comic ID</span>
+                <input type="text" class="form-control" id="comic_id_input">
+                <span class="input-group-text" >Comic ID</span>
+            </div>
+            <div class="input-group mb-3" title="To create a new comic, please fill in this box, Authors and Artists. To change this field for an existing comic, just put in the comic ID and fill this field">
+                <span class="input-group-text" >Comic Name</span>
+                <input type="text" class="form-control" id="comic_name_input">
+                <span class="input-group-text" >Comic Name</span>
+            </div>
+            <div class="input-group mb-3"title="To create a new comic, please fill in this box, Comic name and artists. To change this field for an existing comic, just put in the comic ID and fill this field">
+                <span class="input-group-text">Authors</span>
+                <input type="text" class="form-control" id="authors_input">
+                <span class="input-group-text">Authors</span>  
+            </div>
+            <div class="input-group mb-3" title="To create a new comic, please fill in this box, Comic name and authors. To change this field for an existing comic, just put in the comic ID and fill this field">
+                <span class="input-group-text">Artists</span>
+                <input type="text" class="form-control" id="artists_input">
+                <span class="input-group-text">Artists</span>
+            </div>
+        </fieldset>
+            <button id ="enter_comic" class="btn btn-success hide " title="To create, leave the id field blank, but enter all other fields">Enter Comic into Library</button>
+            <button id ="update_comic" class="btn btn-primary hide " title="To update, provide an id and any other fields." >Update Comic in Library</button>
+            <button id ="delete_comic" class="btn btn-danger hide" title="To delete, provide an id and leave other fields blank.">Delete Comic from Library</button>
+    </div>
+    <div id="view_div">
+        <button id ="view_all_comics" class="btn btn-info">View all Comics</button>
+    </div>
+
+    <div id="comic_readout_div">
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./comiclogic.js"></script>
+
+</body>
+
+</html>

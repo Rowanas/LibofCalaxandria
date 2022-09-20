@@ -4,25 +4,6 @@ body   {
     background: peachpuff;
 }
 
-.peachy {
-    background: peachpuff;
-}
-
-.compensated    {
-    color: black;
-}
-
-.themey{
-    background: url("./recipe.jpg");
-    color: whitesmoke;
-    size: 100%;
-}
-
-#theme_window   {
-    background: url("./recipe.jpg");
-    color: maroon;
-}
-
 #peach_window   {
     background: goldenrod;
     color: maroon;
@@ -44,9 +25,9 @@ body   {
 }
 
 .form-control    {
-        text-align:center;
-        background-color: peachpuff;
-        border: 0px solid rebeccapurple;
+    text-align:center;
+    background-color: peachpuff;
+    border: 0px solid rebeccapurple;
 }
 
 .form-select    {

@@ -13,52 +13,52 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.qa.W8PR.domain.Recipe;
-import com.qa.W8PR.services.RecipeService;
+import com.qa.W8PR.domain.Comic;
+import com.qa.W8PR.services.ComicService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/recipes")
-public class RecipeController {
+@RequestMapping("/comics")
+public class ComicController {
 
-	private RecipeService service;
+	private ComicService service;
 
-	public RecipeController(RecipeService service) {
+	public ComicController(ComicService service) {
 		this.service = service;
 	}
 // Temporary database for testing syntax
-//	private List<Recipe> recipes = new ArrayList<>();
+//	private List<Comic> comics = new ArrayList<>();
 
 	@PostMapping("/create")
-	public ResponseEntity<Recipe> create(@RequestBody Recipe recipe) {
-		return new ResponseEntity<Recipe>(service.create(recipe), HttpStatus.CREATED);
+	public ResponseEntity<Comic> create(@RequestBody Comic comic) {
+		return new ResponseEntity<Comic>(service.create(comic), HttpStatus.CREATED);
 	}
 
 	@GetMapping("/getAll")
-	public ResponseEntity<List<Recipe>> getAll() {
-		return new ResponseEntity<List<Recipe>>(service.getAll(), HttpStatus.OK);
+	public ResponseEntity<List<Comic>> getAll() {
+		return new ResponseEntity<List<Comic>>(service.getAll(), HttpStatus.OK);
 	}
 	
 // I'm keeping these nubbins, but when I'm performing these functions in my webapp,
 //	I might just do them in javascript off a basic get request and display just what I want in JS. 
-//	@GetMapping("/getRecipeByName/{recipeName}")
-//	public ResponseEntity <Recipe> getRecipeByName(@PathVariable String recipeName) {
-//		return new ResponseEntity<Recipe>(service.getRecipeByName(recipeName), HttpStatus.OK);
+//	@GetMapping("/getComicByName/{comicName}")
+//	public ResponseEntity <Comic> getComicByName(@PathVariable String comicName) {
+//		return new ResponseEntity<Comic>(service.getComicByName(comicName), HttpStatus.OK);
 //	}
 //	
 //	@GetMapping("getDietFriendly/{dietFriendly}")
-//	public ResponseEntity<List<Recipe>> getDietFriendly(@PathVariable boolean dietFriendly) {
-//		return new ResponseEntity<List<Recipe>>(service.getDietFriendly(dietFriendly), HttpStatus.OK);
+//	public ResponseEntity<List<Comic>> getDietFriendly(@PathVariable boolean dietFriendly) {
+//		return new ResponseEntity<List<Comic>>(service.getDietFriendly(dietFriendly), HttpStatus.OK);
 //	}
 //	
 	@GetMapping("/getById/{id}")
-	public ResponseEntity<Recipe> getById(@PathVariable long id) {
-		return new ResponseEntity<Recipe>(service.getById(id), HttpStatus.OK);
+	public ResponseEntity<Comic> getById(@PathVariable long id) {
+		return new ResponseEntity<Comic>(service.getById(id), HttpStatus.OK);
 	}
 
 	@PutMapping("/update/{id}")
-	public ResponseEntity<Recipe> update(@PathVariable long id, @RequestBody Recipe recipe) {
-		return new ResponseEntity<Recipe>(service.update(id, recipe), HttpStatus.OK);
+	public ResponseEntity<Comic> update(@PathVariable long id, @RequestBody Comic comic) {
+		return new ResponseEntity<Comic>(service.update(id, comic), HttpStatus.OK);
 	}
 
 	// changed to boolean output to match delete service method.

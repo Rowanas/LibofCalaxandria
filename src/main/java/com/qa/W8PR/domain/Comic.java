@@ -17,28 +17,28 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Recipe {
+public class Comic {
 
 	@Id // makes this column the primary key you can put it in another non-numerical key!
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //longwinded way of saying "autoincrement"
 	private long id;
 	
 	//may put "unique = true" again as a stretch goal
-	//with functionality to kick a user to check an existing recipe if they attempt to create
+	//with functionality to kick a user to check an existing comic if they attempt to create
 	//another with the same name. Could do entirely front end though.
 	@Column(nullable = false)
-	private String recipeName; // recognises camelCase and split to become SQLable names
+	private String comicName; // recognises camelCase and split to become SQLable names
 	
 	@Column(nullable = false)
-	private String ingredients;
+	private String authors;
 
 	@Column
-	private boolean dietFriendly;
+	private String artists;
 
-	public Recipe(String recipeName, String ingredients, boolean dietFriendly) {
+	public Comic(String comicName, String authors, String artists) {
 		super();
-		this.recipeName = recipeName;
-		this.ingredients = ingredients;
-		this.dietFriendly = dietFriendly;
+		this.comicName = comicName;
+		this.authors = authors;
+		this.artists = artists;
 	}	
 }
