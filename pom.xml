@@ -8,10 +8,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.qa</groupId>
-	<artifactId>W5PRRecipeProject</artifactId>
+	<artifactId>LibraryofCalaxandria</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>W5PRRecipeProject</name>
-	<description>Week 5 Project for QA community</description>
+	<name>LibraryofCalaxandria</name>
+	<description>LibraryofCalaxandria</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
